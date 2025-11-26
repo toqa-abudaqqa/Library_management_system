@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="380.0" prefWidth="579.0" style="-fx-background-color: #403f82;" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controllers.CategoryController">
+    <stylesheets>
+        <URL value="@/Style/category.css" />
+    </stylesheets>
+   <children>
+      <VBox alignment="CENTER" layoutX="4.0" layoutY="2.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="69.0" prefWidth="256.0" text="Add Category" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold Italic" size="35.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Label>
+            <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label prefHeight="46.0" prefWidth="121.0" text="Category : " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="CategoryTF" prefHeight="51.0" prefWidth="497.0">
+                     <padding>
+                        <Insets left="50.0" right="50.0" />
+                     </padding>
+                  </TextField>
+               </children>
+               <padding>
+                  <Insets left="50.0" right="50.0" />
+               </padding>
+            </VBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0">
+               <children>
+                  <Button fx:id="addBtn" mnemonicParsing="false" onAction="#addBtnHandel" prefHeight="42.0" prefWidth="132.0" style="-fx-background-color: #8dd39c;" text="Add" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="CancelBtn" mnemonicParsing="false" onAction="#cancelBtnHandel" prefHeight="43.0" prefWidth="126.0" style="-fx-background-color: #ea7171;" text="Cancel" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

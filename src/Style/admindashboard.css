@@ -1,0 +1,17 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.selected{
+    -fx-border-width: 5;
+    -fx-text-fill : #ab97ae;
+    -fx-border-color:  #ab97ae;
+    -fx-font-weight:bolder;
+}
+
+.sidebar-label{
+    -fx-text-fill :white;
+}

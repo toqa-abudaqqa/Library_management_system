@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="721.0" prefWidth="1126.0" style="-fx-border-color: #403f82; -fx-border-width: 5;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.UsersStatisticController">
+    <stylesheets>
+        <URL value="@/Style/usersstatistic.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="172.0" layoutY="126.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="101.0" prefWidth="1106.0" spacing="670.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="86.0" prefWidth="314.0" spacing="10.0">
+                     <children>
+                        <TextField fx:id="SearchTF" onKeyReleased="#Searching" prefHeight="31.0" prefWidth="216.0" />
+                        <Button fx:id="ClearBtn" mnemonicParsing="false" onAction="#Clear" prefHeight="31.0" prefWidth="67.0" style="-fx-background-color: #403f82;" text="Clear" textFill="WHITE" />
+                     </children>
+                  </HBox>
+                  <ImageView fitHeight="42.0" fitWidth="45.0" onMouseClicked="#Logout" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/logout_icon.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="40.0" />
+               </padding>
+            </HBox>
+            <VBox alignment="CENTER" prefHeight="600.0" prefWidth="1106.0" style="-fx-border-color: #403f82; -fx-border-width: 5;">
+               <children>
+                  <TableView fx:id="usersTabelView" prefHeight="596.0" prefWidth="1104.0">
+                     <columns>
+                        <TableColumn fx:id="fullNameColumn" minWidth="20.0" prefWidth="148.0" text="Full Name" />
+                        <TableColumn fx:id="roleColumn" minWidth="20.0" prefWidth="148.0" text="Role" />
+                        <TableColumn fx:id="userNameColumn" minWidth="20.0" prefWidth="148.0" text="User Name" />
+                        <TableColumn fx:id="passwordColumn" minWidth="20.0" prefWidth="148.0" text="Password" />
+                        <TableColumn fx:id="emailColumn" minWidth="20.0" prefWidth="148.0" text="Email" />
+                        <TableColumn fx:id="phoneColumn" minWidth="20.0" prefWidth="148.0" text="Phone" />
+                        <TableColumn fx:id="userImageColumn" minWidth="20.0" prefWidth="148.0" text="User Image" />
+                     </columns>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </TableView>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="5.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
