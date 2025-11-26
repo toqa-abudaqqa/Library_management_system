@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="579.0" prefWidth="613.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.RegisterController">
+    <stylesheets>
+        <URL value="@/Style/register.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="-2.0" layoutY="-2.0" prefHeight="579.0" prefWidth="615.0">
+         <children>
+            <VBox prefHeight="190.0" prefWidth="615.0" spacing="5.0">
+               <children>
+                  <Label prefHeight="28.0" prefWidth="117.0" text="User Image : " />
+                  <ImageView fx:id="userImageView" fitHeight="108.0" fitWidth="120.0" onMouseClicked="#userImageViewCliked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Usericon.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="userImgErrorLabel" prefHeight="21.0" prefWidth="218.0" textFill="#b12121" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="10.0" top="20.0" />
+               </padding>
+            </VBox>
+            <HBox layoutX="10.0" layoutY="200.0" prefHeight="103.0" prefWidth="600.0" spacing="15.0">
+               <children>
+                  <VBox prefHeight="83.0" prefWidth="210.0" spacing="5.0">
+                     <children>
+                        <Label text="Full Name : " />
+                        <TextField fx:id="fullNameTF" />
+                        <Label fx:id="fullNameErrorLabel" prefHeight="21.0" prefWidth="205.0" textFill="#b12121" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="75.0" prefWidth="206.0" spacing="5.0">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="65.0" text="Role : " />
+                        <ComboBox fx:id="roleComboBox" disable="true" prefWidth="150.0" style="-: #265797;" />
+                        <Label fx:id="roleErrorLabel" prefHeight="21.0" prefWidth="204.0" textFill="#b12121" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox prefHeight="103.0" prefWidth="600.0" spacing="15.0">
+               <children>
+                  <VBox prefHeight="83.0" prefWidth="210.0" spacing="5.0">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="93.0" text="User Name : " />
+                        <TextField fx:id="userNameTF" />
+                        <Label fx:id="userNameErrorLabel" prefHeight="21.0" prefWidth="208.0" textFill="#b12121" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="75.0" prefWidth="206.0" spacing="5.0">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="101.0" text="Password : " />
+                        <TextField fx:id="passwordTF" />
+                        <Label fx:id="passwordErrorLabel" prefHeight="21.0" prefWidth="204.0" textFill="#b12121" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="303.0" prefHeight="103.0" prefWidth="600.0" spacing="15.0">
+               <children>
+                  <VBox prefHeight="83.0" prefWidth="210.0" spacing="5.0">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="135.0" text="Email : " />
+                        <TextField fx:id="emailTF" />
+                        <Label fx:id="emailErrorLabel" prefHeight="21.0" prefWidth="210.0" textFill="#b12121" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="10.0" layoutY="10.0" prefHeight="75.0" prefWidth="206.0" spacing="5.0">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="83.0" text="Phone : " />
+                        <TextField fx:id="phoneTF" />
+                        <Label fx:id="phoneErrorLabel" prefHeight="21.0" prefWidth="207.0" textFill="#b12121" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="66.0" prefWidth="600.0" spacing="20.0">
+               <children>
+                  <Button fx:id="registerBtn" mnemonicParsing="false" onAction="#registerBtnHandle" prefHeight="31.0" prefWidth="95.0" style="-fx-border-color: #81adea; -fx-border-width: 2; -fx-border-radius: 5;" text="Register" textFill="#265797">
+                     <font>
+                        <Font name="Yu Gothic UI Light" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="cancleBtn" mnemonicParsing="false" onAction="#cancleBtnHandle" prefHeight="30.0" prefWidth="82.0" style="-fx-border-color: #81adea; -fx-border-radius: 5; -fx-border-width: 2;" text="Cancle" textFill="#265797">
+                     <font>
+                        <Font name="Yu Gothic UI Light" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

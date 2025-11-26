@@ -1,0 +1,25 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.selected{
+    -fx-border-width: 5;
+    -fx-text-fill : #ab97ae;
+    -fx-border-color:  #ab97ae;
+    -fx-font-weight:bolder;
+}
+
+.sidebar-label{
+    -fx-text-fill :white;
+}
+.Pending_BorrowStatus{
+    -fx-background-color:#ab97ae;
+    -fx-text-fill :white;
+}
+.Approved_BorrowStatus{
+    -fx-background-color:darkorange;
+    -fx-text-fill :white;
+}

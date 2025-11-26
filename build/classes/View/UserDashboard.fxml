@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1706.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.UserDashboardController">
+    <stylesheets>
+        <URL value="@/Style/userdashboard.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutX="119.0" layoutY="66.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #31a2bb;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+         <children>
+            <BorderPane layoutX="523.0" layoutY="161.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <HBox alignment="CENTER" prefHeight="0.0" prefWidth="1284.0" style="-fx-background-color: white; -fx-border-width: 5; -fx-border-color: #31a2bb;" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="BOTTOM_LEFT" prefHeight="0.0" prefWidth="900.0">
+                           <children>
+                              <ImageView fx:id="UserImageView" fitHeight="74.0" fitWidth="67.0" onMouseClicked="#userInfoCheck" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/adminIcon.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="userFullName" prefHeight="21.0" prefWidth="224.0">
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="CENTER_RIGHT" prefHeight="0.0" prefWidth="900.0">
+                           <children>
+                              <ImageView fx:id="logout" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#Logout" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Images/logout_icon.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </top>
+               <left>
+                  <VBox prefHeight="776.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-width: 5; -fx-border-color: #31a2bb; -fx-border-radius: 5; -fx-background-radius: 10;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="homeLable" alignment="CENTER" onMouseClicked="#ShowHomeSidebar" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #31a2bb;" text="Home" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="25.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="sidebarBorrowBook" alignment="CENTER" onMouseClicked="#showSidebarBorrowBook" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #31a2bb;" text="Borrow Book" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="sidebarBorrowedBook" alignment="CENTER" onMouseClicked="#showsidebarBorrowedBook" prefHeight="50.0" prefWidth="189.0" style="-fx-background-color: #31a2bb;" text="Borrowed Book" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="20.0" layoutY="160.0" onMouseClicked="#showsidebarLogout" prefHeight="50.0" prefWidth="189.0" style="-fx-background-color: #c55454;" text="Logout" textFill="WHITE" />
+                     </children>
+                  </VBox>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-width: 4;" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="APHome" layoutX="8.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label layoutX="529.0" layoutY="330.0" prefHeight="92.0" prefWidth="503.0" text="Welcom User" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="77.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="APBorrowBook" layoutX="22.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox layoutX="178.0" layoutY="229.0" prefHeight="200.0" prefWidth="100.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" style="-fx-background-color: white;">
+                                       <children>
+                                          <ComboBox fx:id="categoryCombox" onAction="#categoryFilter" prefHeight="39.0" prefWidth="184.0" promptText="Select Ctegory" />
+                                          <ComboBox fx:id="selectBook" onAction="#selectBookListener" prefHeight="40.0" prefWidth="183.0" promptText="Select Book" />
+                                          <Button fx:id="searchBtn" mnemonicParsing="false" onAction="#searchingBook" prefHeight="43.0" prefWidth="155.0" style="-fx-background-color: #da9273;" text="Search" textFill="WHITE">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets left="20.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox prefHeight="622.0" prefWidth="1536.0" style="-fx-background-color: white;">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="613.0" prefWidth="411.0">
+                                             <children>
+                                                <ImageView fx:id="bookImageView" fitHeight="203.0" fitWidth="242.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../Images/books.png" />
+                                                   </image>
+                                                   <HBox.margin>
+                                                      <Insets bottom="150.0" />
+                                                   </HBox.margin>
+                                                </ImageView>
+                                             </children>
+                                          </HBox>
+                                          <VBox prefHeight="613.0" prefWidth="1052.0" spacing="20.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                                                   <children>
+                                                      <VBox prefHeight="100.0" prefWidth="257.0">
+                                                         <children>
+                                                            <Label prefHeight="30.0" prefWidth="257.0" text="Title">
+                                                               <font>
+                                                                  <Font name="Arial Bold" size="15.0" />
+                                                               </font></Label>
+                                                            <TextField fx:id="TitleTF" prefHeight="37.0" prefWidth="257.0" promptText="Enter Title" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="100.0" prefWidth="257.0">
+                                                         <children>
+                                                            <Label prefHeight="30.0" prefWidth="257.0" text="Auther ">
+                                                               <font>
+                                                                  <Font name="Arial Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <TextField fx:id="autherTF" prefHeight="37.0" prefWidth="257.0" promptText="Enter Auther" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="100.0" prefWidth="257.0">
+                                                         <children>
+                                                            <Label prefHeight="30.0" prefWidth="257.0" text="Isbn ">
+                                                               <font>
+                                                                  <Font name="Arial Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <TextField fx:id="isbnTF" prefHeight="37.0" prefWidth="257.0" promptText="Enter Isbn" />
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                                                   <children>
+                                                      <VBox prefHeight="100.0" prefWidth="257.0">
+                                                         <children>
+                                                            <Label prefHeight="30.0" prefWidth="257.0" text="Publish Date">
+                                                               <font>
+                                                                  <Font name="Arial Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <TextField fx:id="publishDataTF" prefHeight="37.0" prefWidth="257.0" promptText="Enter Publish Date" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="100.0" prefWidth="257.0">
+                                                         <children>
+                                                            <Label prefHeight="30.0" prefWidth="257.0" text="Coby Count">
+                                                               <font>
+                                                                  <Font name="Arial Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <TextField fx:id="copyCountTF" prefHeight="37.0" prefWidth="257.0" promptText="Enter Copy Count" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="100.0" prefWidth="257.0">
+                                                         <children>
+                                                            <Label prefHeight="30.0" prefWidth="257.0" text="Page Count">
+                                                               <font>
+                                                                  <Font name="Arial Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <TextField fx:id="pageCountTF" prefHeight="37.0" prefWidth="257.0" promptText="Enter Page Count" />
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                                                   <children>
+                                                      <VBox prefHeight="100.0" prefWidth="257.0">
+                                                         <children>
+                                                            <Label prefHeight="30.0" prefWidth="257.0" text="Publisher">
+                                                               <font>
+                                                                  <Font name="Arial Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <TextField fx:id="publisherTF" prefHeight="37.0" prefWidth="257.0" promptText="Enter Publisher" />
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox prefHeight="100.0" prefWidth="257.0">
+                                                         <children>
+                                                            <Label prefHeight="30.0" prefWidth="257.0" text="Category">
+                                                               <font>
+                                                                  <Font name="Arial Bold" size="15.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <TextField fx:id="categoryTF" prefHeight="37.0" prefWidth="257.0" promptText="Enter Category" />
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                                   <children>
+                                                      <Button fx:id="borrowBtn" mnemonicParsing="false" onAction="#Borrowing" prefHeight="40.0" prefWidth="130.0" style="-fx-background-color: #a668c2;" text="Request" textFill="WHITE">
+                                                         <HBox.margin>
+                                                            <Insets left="50.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                      <Button fx:id="clearBtn" mnemonicParsing="false" onAction="#clearing" prefHeight="39.0" prefWidth="130.0" style="-fx-background-color: #da6363;" text="Clear" textFill="WHITE" />
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <padding>
+                                                <Insets left="10.0" top="70.0" />
+                                             </padding>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="APBorrowedBook" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                           <children>
+                              <FlowPane fx:id="flowPane" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets top="5.0" />
+                     </BorderPane.margin>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
